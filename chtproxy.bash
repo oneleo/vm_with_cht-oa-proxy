@@ -25,4 +25,8 @@ if [ ! -f "/etc/systemd/system/docker.service.d/http-proxy.conf" ]; then
 	echo "export https_proxy=\"${CHT_PROXY}\"" >> "${HOME}/.bashrc" 2>&1
 	echo "export HTTP_PROXY=\"${CHT_PROXY}\"" >> "${HOME}/.bashrc" 2>&1
 	echo "export HTTPS_PROXY=\"${CHT_PROXY}\"" >> "${HOME}/.bashrc" 2>&1
+	
+	sudo service docker restart
+	sudo systemctl daemon-reload
+	sudo systemctl restart docker
 fi

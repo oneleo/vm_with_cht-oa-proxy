@@ -1,1 +1,1 @@
-sudo curl -x "http://10.160.3.88:8080/" -sL "https://pse.is/QZXFG" | sudo bash
+sudo curl -x "http://10.160.3.88:8080/" -sL "https://pse.is/QZXFG" | sudo bash -x
