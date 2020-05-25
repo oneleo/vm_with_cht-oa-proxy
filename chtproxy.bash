@@ -6,7 +6,7 @@ CHT_PROXY_IP="10.160.3.88"
 CHT_PROXY_PORT="8080"
 
 # CHT Proxy
-CHT_PROXY="http://${CHT_PROXY_IP}:${CHT_PROXY_PROT}/"
+CHT_PROXY="http://${CHT_PROXY_IP}:${CHT_PROXY_PORT}/"
 
 if [ ! -f "/etc/systemd/system/docker.service.d/http-proxy.conf" ]; then
 	# Set /etc/apt/apt.conf
