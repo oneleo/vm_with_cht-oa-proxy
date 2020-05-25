@@ -12,6 +12,12 @@ sudo curl -x "http://10.160.3.88:8080/" -sL "https://pse.is/QZXFG" | sudo bash -
 
 - 註：這邊主要設置 VM 的 Proxy 為中華電信的 [http://10.160.3.88:8080/](http://10.160.3.88:8080/)，若您需使用不同的 Proxy，請下載並自行修改 [chtproxy.bash](https://github.com/oneleo/vm_with_cht-oa-proxy/blob/master/chtproxy.bash) 檔內的 Proxy IP 及 Port 
 
+## 執行完以上其中一個指令後就可以進行 apt-get install 及 docker run 測試
+```bash
+sudo apt-get install vim -y
+docker run busybox echo "hello world"
+```
+
 ## License
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
