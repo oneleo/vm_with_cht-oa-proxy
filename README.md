@@ -18,6 +18,16 @@ sudo apt-get install vim -y
 docker run busybox echo "hello world"
 ```
 
+## 註：若您上述指令出現錯誤訊息（即無法下載）請嘗試使用其他中華電信 OA 網段 Proxy：
+```bash
+sudo curl -x "http://10.160.128.28:8080/" -sL "https://raw.githubusercontent.com/oneleo/vm_with_cht-oa-proxy/master/chtproxy-010-160-128-028.bash" | sudo bash -x
+```
+或是另一組 Proxy Server
+```bash
+sudo curl -x "http://10.160.128.16:8080/" -sL "https://raw.githubusercontent.com/oneleo/vm_with_cht-oa-proxy/master/chtproxy-010-160-128-016.bash" | sudo bash -x
+```
+直到可順利上網並設置完成
+
 ## License
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
