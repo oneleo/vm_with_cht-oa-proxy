@@ -27,8 +27,8 @@ if [ ! -f "/etc/systemd/system/docker.service.d/http-proxy.conf" ]; then
 	echo "export HTTPS_PROXY=\"${CHT_PROXY}\"" >> "${HOME}/.bashrc" 2>&1
 
 	# for docker build and docker run
-	mkdir -p ~/.docker
-	cat << END > ~/.docker/config.json
+	mkdir -p "${HOME}/.docker"
+cat << END > "${HOME}/.docker/config.json"
 {
  "proxies":
  {
