@@ -29,4 +29,20 @@ if [ ! -f "/etc/systemd/system/docker.service.d/http-proxy.conf" ]; then
 	sudo service docker restart
 	sudo systemctl daemon-reload
 	sudo systemctl restart docker
+ # for docker build and docker run
+        mkdir -p ~/.docker
+cat << END > ~/.docker/config.json
+{
+ "proxies":
+ {
+   "default":
+   {
+     "httpProxy": "${CHT_PROXY}",
+     "httpsProxy": "${CHT_PROXY}",
+     "noProxy": "localhost,127.0.0.1"
+   }
+ }
+}
+END
+
 fi
