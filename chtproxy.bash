@@ -30,15 +30,15 @@ if [ ! -f "/etc/systemd/system/docker.service.d/http-proxy.conf" ]; then
 	mkdir -p ~/.docker
 	cat << END > ~/.docker/config.json
 {
-	"proxies":
-		{
-			"default":
-				{
-					"httpProxy": "${CHT_PROXY}",
-					"httpsProxy": "${CHT_PROXY}",
-					"noProxy": "localhost,127.0.0.1"
-				}
-		}
+ "proxies":
+ {
+   "default":
+   {
+     "httpProxy": "${CHT_PROXY}",
+     "httpsProxy": "${CHT_PROXY}",
+     "noProxy": "localhost,127.0.0.1"
+   }
+ }
 }
 END
 
